@@ -165,6 +165,12 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
+  let deDupedList = list.filter((ele, i) => {
+    if (list.indexOf(ele) === i) {
+      return ele;
+    }
+  });
+  return deDupedList;
 
 }
 
